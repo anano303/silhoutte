@@ -145,3 +145,5 @@ main section:first-child {
     padding: 40px 16px;
   }
 }
+
+/* Remove the previous chat icon styles as we're now using inline styles */

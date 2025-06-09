@@ -1,0 +1,129 @@
+.customImage {
+  flex: 1;
+}
+
+.customImage img {
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 25px;
+  margin: 0 auto;
+}
+
+.productCard {
+  background-color: var(--background);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.productCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.productImage {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 12px 12px 0 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  display: block;
+}
+
+.productCard:hover .image {
+  transform: scale(1.05);
+}
+
+.productDetails {
+  padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.productDetails h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.productDetails p {
+  color: var(--foreground);
+  opacity: 0.8;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.portfolioHero {
+  height: 50vh;
+  min-height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("/assets/1.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 0 20px;
+  padding-top: 120px; /* Increased padding to account for header */
+  margin-top: 0;
+  position: relative;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .portfolioHero h1 {
+    font-size: 2.5rem;
+  }
+
+  .portfolioHero p {
+    font-size: 1.1rem;
+  }
+
+  .customContent {
+    flex-direction: column;
+  }
+
+  .customImage {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .portfolioGallery,
+  .customOrders {
+    padding: 60px 0;
+  }
+
+  .productGrid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .productImage {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -11,7 +11,16 @@ export default function Home() {
 
   return (
     <>
-      <section className={styles.hero}>
+      <section
+        className={styles.hero}
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/assets/77.jpg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          filter: "brightness(0.9)", // Slightly darker
+        }}
+      >
         <div className={styles.heroContent}>
           <h1>
             თანამედროვე სილუეტები <br />

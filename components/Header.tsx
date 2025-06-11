@@ -34,7 +34,7 @@ export default function Header() {
       <div className={styles.container}>
         <Link href="/" className={styles.logo}>
           <Image
-            src="/logo.jpg"
+            src="/logo.png"
             alt="Silhouette Georgia"
             width={180}
             height={60}

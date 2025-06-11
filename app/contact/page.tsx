@@ -54,7 +54,7 @@ export default function ContactPage() {
         className={styles.contactHero}
         style={{
           backgroundImage:
-            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/logo.jpg")',
+            'linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/logo.png")',
         }}
       >
         <div className="container">

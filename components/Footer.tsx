@@ -13,7 +13,7 @@ export default function Footer() {
           <div className={styles.footerLogo}>
             <Link href="/">
               <Image
-                src="/logo.jpg"
+                src="/logo.png"
                 alt="Silhouette Georgia"
                 width={140}
                 height={45}

@@ -115,7 +115,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3>ელ-ფოსტა</h3>
-                    <a href="mailto:info@silhouette.ge">info@silhouette.ge</a>
+                    <a href="mailto:info@silhouette.ge">silhouettegeorgia1@gmail.com</a>
                   </div>
                 </div>
 

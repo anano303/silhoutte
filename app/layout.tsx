@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Silhouette Georgia - ხელნაკეთი ინტერიერის დეკორი",
+  title: "Silhouette  - სილუეტი- შენი სახლის ელეგანტური შტრიხი",
   description:
     "თანამედროვე სტილის, ხელნაკეთი ორიგინალური საყვავილეები და ინტერიერის დეკორი",
 };

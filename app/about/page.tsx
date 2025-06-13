@@ -8,7 +8,7 @@ export default function AboutPage() {
         <div className="container">
           <h1>ჩვენს შესახებ</h1>
           <p>
-            გაიცანით Silhouette Georgia - თანამედროვე დიზაინის საყვავილე და
+            გაიცანით Silhouette - თანამედროვე დიზაინის საყვავილე და
             დეკორატიული ნივთების შემქმნელი
           </p>
         </div>
@@ -152,7 +152,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className={styles.teamSection}>
+      {/* <section className={styles.teamSection}>
         <div className="container">
           <h2 className="section-title">ჩვენი გუნდი</h2>
           <div className={styles.teamGrid}>
@@ -196,7 +196,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   );
 }

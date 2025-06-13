@@ -92,7 +92,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3>ტელეფონი</h3>
-                    <a href="tel:+995599123456">+995 599 12 34 56</a>
+                    <a href="tel:+995599123456">+995 598 61 97 96</a>
                   </div>
                 </div>
 
@@ -161,8 +161,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3>სამუშაო საათები</h3>
-                    <p>ორშაბათი - პარასკევი: 10:00 - 18:00</p>
-                    <p>შაბათი: 11:00 - 16:00</p>
+                    <p>ორშაბათი - კვირა: 09:00 - 20:00</p>
+                    
                   </div>
                 </div>
               </div>

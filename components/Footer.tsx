@@ -41,7 +41,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/portfolio" style={{ color: "#ffffff" }}>
-                    პორტფოლიო
+                    ჩვენი პროდუქცია
                   </Link>
                 </li>
                 <li>

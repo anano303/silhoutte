@@ -82,7 +82,7 @@ export default function Header() {
                 onClick={() => setIsOpen(false)}
                 style={{ color: "#ffffff" }}
               >
-                პორტფოლიო
+                ჩვენი პროდუქცია
               </Link>
             </li>
             <li>

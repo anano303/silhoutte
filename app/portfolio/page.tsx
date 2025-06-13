@@ -281,7 +281,7 @@ export default function PortfolioPage() {
     <>
       <section className={styles.portfolioHero} style={{ paddingTop: "120px" }}>
         <div className="container">
-          <h1>პორტფოლიო</h1>
+          <h1>ჩვენი პროდუქცია</h1>
           <p>გაეცანით ჩვენს ნამუშევრებს და უნიკალურ პროდუქციას</p>
         </div>
       </section>

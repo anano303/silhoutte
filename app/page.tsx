@@ -23,13 +23,13 @@ export default function Home() {
       >
         <div className={styles.heroContent}>
           <h1>
-            თანამედროვე სილუეტები <br />
-            თქვენი სახლისთვის
+           სილუეტი - შენი სახლის <br />
+            ელეგანტური შტრიხი
           </h1>
           <p>ხელნაკეთი ორიგინალური საყვავილეები და ინტერიერის დეკორი</p>
           <div className={styles.heroCtas}>
             <Link href="/portfolio" className={styles.primaryButton}>
-              ნახეთ პორტფოლიო
+              ნახეთ პროდუქცია
             </Link>
             <Link href="/contact" className={styles.secondaryButton}>
               დაგვიკავშირდით
@@ -144,7 +144,7 @@ export default function Home() {
           </div>
           <div className={styles.productsCta}>
             <Link href="/portfolio" className={styles.secondaryButton}>
-              იხილეთ სრული პორტფოლიო
+              იხილეთ სრული პროდუქცია
             </Link>
           </div>
         </div>

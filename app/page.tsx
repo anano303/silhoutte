@@ -4,9 +4,9 @@ import styles from "./page.module.css";
 
 export default function Home() {
   const featuredProducts = [
-    { id: 1, title: "მინიმალისტური საყვავილე", image: "/assets/1.jpg" },
-    { id: 2, title: "კერამიკული დეკორი", image: "/assets/2.jpg" },
-    { id: 3, title: "ხის საყვავილე", image: "/assets/3.jpg" },
+    { id: 1, title: "ღვინის ბოთლების ორიგინალური სადგამი", image: "/assets/37.jpg" },
+    { id: 2, title: "დეკორატიული საყვავილე", image: "/assets/2.jpg" },
+    { id: 3, title: "უსაყვარლესი მეტალის ხილის კალათა", image: "/assets/36.jpg" },
   ];
 
   return (

@@ -1,5 +1,9 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import styles from "./portfolio.module.css";
+import ImageViewer from "@/components/ImageViewer";
 
 const products = [
   {
@@ -98,9 +102,173 @@ const products = [
     image: "/assets/16.jpg",
     description: "თანამედროვე სტილის ინტერიერის დეკორის კომპლექტი",
   },
+  {
+    id: 17,
+    title: "კედლის პანელი",
+    image: "/assets/17.jpg",
+    description: "დეკორატიული კედლის პანელი აბსტრაქტული დიზაინით",
+  },
+  {
+    id: 18,
+    title: "მაგიდის აქსესუარი",
+    image: "/assets/18.jpg",
+    description: "ელეგანტური დიზაინის მაგიდის დეკორატიული აქსესუარი",
+  },
+  {
+    id: 19,
+    title: "მეტალის საყვავილე",
+    image: "/assets/19.jpg",
+    description: "თანამედროვე მეტალის საყვავილე მინიმალისტური დიზაინით",
+  },
+  {
+    id: 20,
+    title: "ხის ყუთი",
+    image: "/assets/20.jpg",
+    description: "ხელნაკეთი ხის დეკორატიული ყუთი",
+  },
+  {
+    id: 21,
+    title: "კერამიკული თეფში",
+    image: "/assets/21.jpg",
+    description: "ხელნაკეთი კერამიკული დეკორატიული თეფში",
+  },
+  {
+    id: 22,
+    title: "სტილიზებული ვაზა",
+    image: "/assets/22.jpg",
+    description: "არტ-დეკორის სტილის კერამიკული ვაზა",
+  },
+  {
+    id: 23,
+    title: "გეომეტრიული საყვავილე",
+    image: "/assets/23.jpg",
+    description: "გეომეტრიული ფორმის თანამედროვე საყვავილე",
+  },
+  {
+    id: 24,
+    title: "მინიატურული ქოთანი",
+    image: "/assets/24.jpg",
+    description: "მინიატურული ზომის დეკორატიული ქოთანი მცენარეებისთვის",
+  },
+  {
+    id: 25,
+    title: "შავი კერამიკული ვაზა",
+    image: "/assets/25.jpg",
+    description: "მატი ზედაპირის შავი კერამიკული ვაზა",
+  },
+  {
+    id: 26,
+    title: "დეკორატიული ფიგურა",
+    image: "/assets/26.jpg",
+    description: "აბსტრაქტული ფორმის დეკორატიული ფიგურა",
+  },
+  {
+    id: 27,
+    title: "მრგვალი საყვავილე",
+    image: "/assets/27.jpg",
+    description: "სფერული ფორმის თანამედროვე კერამიკული საყვავილე",
+  },
+  {
+    id: 28,
+    title: "ტექსტურირებული ვაზა",
+    image: "/assets/28.jpg",
+    description: "ხელნაკეთი ტექსტურირებული ზედაპირის მქონე ვაზა",
+  },
+  {
+    id: 29,
+    title: "დეკორატიული ჯამი",
+    image: "/assets/29.jpg",
+    description: "მრავალფუნქციური დეკორატიული კერამიკული ჯამი",
+  },
+  {
+    id: 30,
+    title: "ინდუსტრიული საყვავილე",
+    image: "/assets/30.jpg",
+    description: "ინდუსტრიული სტილის მეტალის საყვავილე",
+  },
+  {
+    id: 31,
+    title: "კერამიკული სკულპტურა",
+    image: "/assets/31.jpg",
+    description: "აბსტრაქტული კერამიკული სკულპტურა ინტერიერისთვის",
+  },
+  {
+    id: 32,
+    title: "ხის დეკორატიული თეფში",
+    image: "/assets/32.jpg",
+    description: "ხელნაკეთი ხის დეკორატიული თეფში",
+  },
+  {
+    id: 33,
+    title: "მაღალი საყვავილე",
+    image: "/assets/33.jpg",
+    description: "მაღალი ფორმის ელეგანტური საყვავილე",
+  },
+  {
+    id: 34,
+    title: "ხის სანთლის დამჭერი",
+    image: "/assets/34.jpg",
+    description: "ბუნებრივი ხის სანთლის დამჭერი",
+  },
+  {
+    id: 35,
+    title: "მოზაიკური დეკორი",
+    image: "/assets/35.jpg",
+    description: "მოზაიკური დიზაინის დეკორატიული ნივთი",
+  },
+  {
+    id: 36,
+    title: "მინიმალისტური ვაზა",
+    image: "/assets/36.jpg",
+    description: "სუფთა ხაზების მქონე მინიმალისტური დიზაინის ვაზა",
+  },
+  {
+    id: 37,
+    title: "დეკორატიული ლამპა",
+    image: "/assets/37.jpg",
+    description: "მოდერნისტული სტილის დეკორატიული ლამპა",
+  },
+  {
+    id: 38,
+    title: "ტრადიციული საყვავილე",
+    image: "/assets/38.jpg",
+    description: "ტრადიციული მოტივებით შექმნილი საყვავილე",
+  },
+  {
+    id: 39,
+    title: "აბსტრაქტული დეკორი",
+    image: "/assets/39.jpg",
+    description: "აბსტრაქტული ფორმის დეკორატიული ელემენტი",
+  },
+  {
+    id: 40,
+    title: "სამაგიდო დეკორი",
+    image: "/assets/40.jpg",
+    description: "ელეგანტური დიზაინის სამაგიდო დეკორატიული ნივთი",
+  },
 ];
 
 export default function PortfolioPage() {
+  const [visibleProducts, setVisibleProducts] = useState(12); // Show 12 products initially
+  const [loading, setLoading] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
+
+  // Function to load more products
+  const loadMore = () => {
+    setLoading(true);
+    // Add a small delay to simulate loading
+    setTimeout(() => {
+      setVisibleProducts((prev) => Math.min(prev + 12, products.length));
+      setLoading(false);
+    }, 500);
+  };
+
+  // Check if there are more products to load
+  const hasMore = visibleProducts < products.length;
+
   return (
     <>
       <section className={styles.portfolioHero} style={{ paddingTop: "120px" }}>
@@ -113,13 +281,32 @@ export default function PortfolioPage() {
       <section className={styles.portfolioGallery}>
         <div className="container">
           <div className={styles.productGrid}>
-            {products.map((product) => (
+            {products.slice(0, visibleProducts).map((product, index) => (
               <div
                 key={product.id}
                 className={styles.productCard}
                 id={`product-${product.id}`}
               >
-                <div className={styles.productImage}>
+                <div
+                  className={styles.productImage}
+                  onClick={() =>
+                    setSelectedImage({
+                      src: product.image,
+                      alt: product.title,
+                    })
+                  }
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`გადიდება: ${product.title}`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") {
+                      setSelectedImage({
+                        src: product.image,
+                        alt: product.title,
+                      });
+                    }
+                  }}
+                >
                   <Image
                     src={product.image}
                     alt={product.title}
@@ -127,7 +314,50 @@ export default function PortfolioPage() {
                     height={300}
                     style={{ objectFit: "cover" }}
                     className={styles.image}
+                    loading={index < 8 ? "eager" : "lazy"}
+                    priority={index < 4}
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   />
+                  <div className={styles.imageOverlay}>
+                    <span className={styles.zoomIcon}>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M15 3H21V9"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M9 21H3V15"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M21 3L14 10"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                        <path
+                          d="M3 21L10 14"
+                          stroke="white"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
+                  </div>
                 </div>
                 <div className={styles.productDetails}>
                   <h3>{product.title}</h3>
@@ -136,6 +366,18 @@ export default function PortfolioPage() {
               </div>
             ))}
           </div>
+
+          {hasMore && (
+            <div className={styles.loadMoreContainer}>
+              <button
+                onClick={loadMore}
+                disabled={loading}
+                className={styles.loadMoreButton}
+              >
+                {loading ? "იტვირთება..." : "მეტის ნახვა"}
+              </button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -168,6 +410,15 @@ export default function PortfolioPage() {
           </div>
         </div>
       </section>
+
+      {/* Image Viewer Modal */}
+      {selectedImage && (
+        <ImageViewer
+          src={selectedImage.src}
+          alt={selectedImage.alt}
+          onClose={() => setSelectedImage(null)}
+        />
+      )}
     </>
   );
 }

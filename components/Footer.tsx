@@ -56,8 +56,8 @@ export default function Footer() {
               <h4 style={{ color: "#FFD700" }}>კონტაქტი</h4>
               <ul>
                 <li>
-                  <a href="tel:+995599123456" style={{ color: "#ffffff" }}>
-                    +995 599 12 34 56
+                  <a href="tel:+995598619796" style={{ color: "#ffffff" }}>
+                    +995 598 61 97 96
                   </a>
                 </li>
                 <li>
